@@ -1,1 +1,24 @@
 node_modules/
+
+//the 1st process
+echo "# evoLandingPage" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/EvolutionDesign/evoLandingPage.git
+git push -u origin master
+
+npm init
+npm i -D postcss-cli npm-run-all concat autoprefixer node-sass
+npm i live-server
+
+//write the process for scripts
+"watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+
+//the 2

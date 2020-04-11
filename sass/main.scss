@@ -1,0 +1,75 @@
+@mixin background-details {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+$light-green : #f9fcfb;
+$dark-green: #b0eacd;
+$darker-green : #21bf73;
+$red : #fd5e53;
+$fam : 'Rochester';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; ///10/16
+    max-width: 144rem;
+}
+
+body {
+    min-height: 100vh;
+    font-family: $fam;
+    background-image: linear-gradient(to right bottom,
+            rgba($red, 0.6),
+            rgba($light-green, 1)), ;
+    @include background-details;
+    position: relative;
+}
+
+.date {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.time {
+    font-size: 9.6rem;
+    color: $light-green;
+}
+
+#day {
+    font-size: 9.6rem;
+    color: $dark-green;
+}
+
+.container {
+    margin: auto;
+    max-width: 106.4rem;
+    height: 56.9rem;
+    background-image: url('../img/evening.jpg');
+    @include background-details;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2rem 13px 9px rgba($darker-green, 0.6);
+}
+
+.welcome {
+    color: $dark-green;
+    font-size: 7.2rem;
+}
+
+.focus {
+    color: $dark-green;
+    font-size: 3.6rem;
+}
