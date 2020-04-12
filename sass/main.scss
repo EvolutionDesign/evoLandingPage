@@ -61,15 +61,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 2rem 13px 9px rgba($darker-green, 0.6);
+    box-shadow: 1rem 13px 9px rgba($darker-green, 0.6);
 }
 
-.welcome {
+.welcome,
+#name {
     color: $dark-green;
     font-size: 7.2rem;
+    text-shadow: 2px 13px 9px rgba(#000000, $alpha: 1.0);
 }
 
 .focus {
     color: $dark-green;
     font-size: 3.6rem;
+    text-shadow: 2px 13px 9px rgba(#000000, $alpha: 1.0);
 }
